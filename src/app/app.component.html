@@ -1,3 +1,39 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- we can get the sidenav whereever we want from with menuId -->
+
+  <ion-menu side="start" menuId="m1">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          PairBnB
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- when we press a button which is in sidenav, the navbar doesnt close -->
+        <!-- so we use ion-menu-toggle to close navbar automaticly -->
+        <ion-menu-toggle >
+          <ion-item lines="none" routerLink="/places/tabs/discover">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Discover Places</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/bookings" >
+            <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+            <ion-label>Your bookings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="onLogout()" button>
+            <ion-icon name="exit" slot="start"  ></ion-icon>
+            <ion-label>LogOut</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>

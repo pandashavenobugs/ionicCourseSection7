@@ -1,0 +1,14 @@
+{
+  "appId": "com.udemy-course.ionic-angular",
+  "appName": "ionic-angular-course2",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "linuxAndroidStudioPath":"/home/berat/android-studio/bin/studio.sh",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
